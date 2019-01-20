@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Książki o Javascript</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="books, javascript, programming, books about javascript, learn javascript, js">
+    <meta name="description" content="The best books to learn javascript">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400i,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>JS books</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Sort by</h2>
+            <ul>
+                <li>
+                    <input id="by-pages" onclick="RenderBooks()" name="sort" type="radio"> number of pages</li>
+                <li>
+                    <input id="by-release-date" onclick="RenderBooks()" name="sort" type="radio"> release date</li>
+                <li>
+                    <input id="by-author" onclick="RenderBooks()" name="sort" type="radio"> author</li>
+            </ul>
+            <h2>Show only</h2>
+            <ul>
+                <li>More than
+                    <input id="page-count" onkeyup="RenderBooks()" class="input_square" type="text"> pages</li>
+            </ul>
+            <button onclick="ClearUi()">Clear</button>
+        </aside>
+        <ol id="book-section">
+
+        </ol>
+    </main>
+    <footer>
+        <p>Created by Paulina Sikora</p>
+    </footer>
+    <div id="myModal" class="modal">
+        <span class="close">x</span>
+        <img class="modal-content" id="" src="">
+    </div>
+    <script type="text/javascript">
+        InitializeBooks();
+        RenderBooks();
+    </script>
+</body>
+
+</html>
